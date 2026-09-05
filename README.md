@@ -37,6 +37,22 @@ Programar hardware me ensinou uma coisa que levo comigo: quando dá errado, não
 
 ---
 
+## Fora do código
+
+**Desenho** desde sempre e estou estudando **animação**. Boa parte do meu jeito de resolver problema veio daí: começar pelo esboço, errar barato, refazer.
+
+Sou **mestre de RPG de mesa há três anos**. Na prática isso virou treino semanal de preparar estrutura, conduzir um grupo, improvisar quando o plano vai por água abaixo e segurar a atenção de gente por horas seguidas. É também de onde saiu a ideia do meu projeto de software para mesas de RPG.
+
+Tenho um canal no **YouTube** sobre jogos, teorias e RPG de mesa, com publicação fixa duas vezes por semana. Manter esse ritmo — roteiro, gravação e edição, toda semana, sem falhar — é a coisa mais parecida com disciplina profissional que eu já construí.
+
+<!-- Troque os links abaixo pelos seus. Apague as linhas que você não quiser publicar. -->
+
+- 🎬 YouTube — [@Maxymuxzs](https://youtube.com/@Maxymuxzs)
+- 🎨 Instagram — [@maxymuxzs](https://www.instagram.com/maxymuxzs/)
+- 🎥 TikTok — [@maxymuxzs82](https://www.tiktok.com/@maxymuxzs82)
+
+---
+
 ## Onde me achar
 
 - **E-mail:** danielcarrapeiromendesdev@gmail.com
