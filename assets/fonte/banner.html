@@ -1,0 +1,108 @@
+<!doctype html>
+<!--
+  Fonte do assets/banner.webp, o banner do topo do README.
+
+  O README usa uma imagem WebP, e não este arquivo, porque o GitHub serve as
+  imagens do README com regras de segurança que podem bloquear fonte e imagem
+  embutidas num SVG. Uma imagem comum aparece igual em qualquer navegador.
+
+  Texto que envelhece ("último semestre") não entra aqui: fica no README, que
+  se edita em um minuto. O banner leva só o que não muda.
+
+  Para gerar de novo, depois de editar (da pasta assets/fonte/):
+    1. chrome --headless=new --hide-scrollbars --force-device-scale-factor=2 \
+         --default-background-color=00000000 --window-size=1200,300 \
+         --virtual-time-budget=4000 --screenshot=banner.png banner.html
+    2. python3 -c "from PIL import Image; Image.open('banner.png').save('../banner.webp', quality=90, method=6)"
+    3. Apague o banner.png.
+  O "2x" dobra a resolução para ficar nítido em tela de alta densidade. As
+  fontes vêm do Google Fonts, então o passo 1 precisa de internet.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Banner do perfil</title>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Lora:ital,wght@1,500&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: transparent; }
+  svg { display: block; }
+</style>
+</head>
+<body>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="canto"><rect width="1200" height="300" rx="24"/></clipPath>
+    <filter id="sombra" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1a0f08" flood-opacity=".45"/>
+    </filter>
+    <!-- uma pedra: o mesmo formato, reaproveitado com tamanhos diferentes -->
+    <g id="pedra">
+      <rect x="0" y="0" width="100" height="100" rx="26" fill="#8e9998" stroke="#56605f" stroke-width="5"/>
+      <path d="M14 30 Q16 14 32 12 L60 12" fill="none" stroke="#a9b3b2" stroke-width="7" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <g clip-path="url(#canto)">
+    <!-- terra ao fundo -->
+    <rect width="1200" height="300" fill="#2e2310"/>
+
+    <!-- a porta: tábuas de madeira -->
+    <rect x="70" y="0" width="1060" height="300" fill="#664134"/>
+    <g stroke="#4e2c20" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M200 -5 Q196 150 204 305"/>
+      <path d="M340 -5 Q344 150 338 305"/>
+      <path d="M480 -5 Q476 150 482 305"/>
+      <path d="M620 -5 Q624 150 618 305"/>
+      <path d="M760 -5 Q756 150 762 305"/>
+      <path d="M900 -5 Q904 150 898 305"/>
+      <path d="M1040 -5 Q1036 150 1042 305"/>
+    </g>
+    <!-- veios finos da madeira -->
+    <g stroke="#5a3829" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8">
+      <path d="M260 20 Q256 90 262 140"/>
+      <path d="M410 170 Q414 230 408 290"/>
+      <path d="M560 10 Q556 60 560 110"/>
+      <path d="M830 190 Q834 240 830 290"/>
+      <path d="M970 30 Q966 100 972 150"/>
+      <path d="M1090 160 Q1094 220 1088 280"/>
+    </g>
+    <!-- sombra da moldura de pedra sobre a porta -->
+    <rect x="70" y="0" width="30" height="300" fill="#3d2418" opacity=".45"/>
+    <rect x="1100" y="0" width="30" height="300" fill="#3d2418" opacity=".45"/>
+
+    <!-- moldura de pedras, esquerda -->
+    <use href="#pedra" transform="translate(-30 -40) scale(1.15 .95)"/>
+    <use href="#pedra" transform="translate(-22 52) scale(1.05 .9)"/>
+    <use href="#pedra" transform="translate(-34 136) scale(1.2 .85)"/>
+    <use href="#pedra" transform="translate(-20 218) scale(1.05 1)"/>
+    <!-- moldura de pedras, direita -->
+    <use href="#pedra" transform="translate(1108 -30) scale(1.1 .9)"/>
+    <use href="#pedra" transform="translate(1100 56) scale(1.25 .95)"/>
+    <use href="#pedra" transform="translate(1112 148) scale(1.05 .85)"/>
+    <use href="#pedra" transform="translate(1104 226) scale(1.2 1)"/>
+
+    <!-- o Maxy espiando -->
+    <image href="maxy.png" x="92" y="38" width="236" height="236"
+           transform="rotate(-7 210 156)" filter="url(#sombra)"/>
+
+    <!-- a placa de pergaminho -->
+    <g filter="url(#sombra)">
+      <path d="M378 80 L520 58 L700 68 L862 50 L1012 64 L1062 98 L1052 152 L1066 202 L1028 240 L862 252 L700 244 L540 258 L402 242 L366 196 L382 140 Z"
+            fill="#c2a171" stroke="#a8844f" stroke-width="5" stroke-linejoin="round"/>
+    </g>
+    <circle cx="520" cy="76" r="6" fill="#593119"/>
+    <circle cx="905" cy="68" r="6" fill="#593119"/>
+
+    <!-- o nome, escrito na placa -->
+    <g transform="rotate(-2 715 160)" fill="#593119" font-family="'Permanent Marker', cursive" text-anchor="middle">
+      <text x="715" y="146" font-size="86">Daniel</text>
+      <text x="715" y="214" font-size="52">Carrapeiro Mendes</text>
+    </g>
+
+    <!-- o convite para bater na porta -->
+    <text x="1082" y="284" text-anchor="end" fill="#e8dcc0" font-family="Lora, Georgia, serif"
+          font-style="italic" font-weight="500" font-size="19">bata na porta: toca.maxymuxzs.com.br</text>
+  </g>
+</svg>
+</body>
+</html>
