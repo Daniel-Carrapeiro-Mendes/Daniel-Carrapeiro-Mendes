@@ -16,6 +16,11 @@ Comecei programando hardware no curso técnico de Automação Industrial e acabe
 
 Meus projetos pessoais nascem do que eu gosto fora do código: jogos, desenho e RPG de mesa.
 
+<!-- Imagens numa faixa e o texto embaixo, fora da tabela, de propósito. Com o
+     texto dentro das células (cartões lado a lado, ou um projeto por linha), o
+     celular espreme as colunas e corta a última: o CSS do GitHub limita toda
+     imagem à largura da célula, e nenhum atributo segura a coluna. Testado em
+     2026-09-27. -->
 <table>
   <tr>
     <td width="33%" align="center" valign="top">
